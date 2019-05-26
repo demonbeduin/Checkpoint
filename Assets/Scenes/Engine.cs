@@ -6,7 +6,7 @@ public class Engine : MonoBehaviour
 {
     public Transform player;
     public Transform target;
-    public int speed;
+    public float speed;
 
     void Start()
     {
@@ -16,9 +16,13 @@ public class Engine : MonoBehaviour
 
     void Update()
     {
-        //Vector3 relativePos = (target.transform.position - player.transform.position).normalized;
-        //Quaternion rotation = Quaternion.LookRotation(relativePos);
-        //target.transform.rotation = rotation;
-        target.transform.LookAt(player);
+        Vector3 targetDir = (player.position - target.position).normalized;
+        Vector3 newDir = Vector3.RotateTowards(target.transform.forward, targetDir, speed * Time.deltaTime, 0.0F);
+        target.transform.rotation = Quaternion.LookRotation(newDir);
+
+        //Vector3 relativePos = player.transform.position - target.transform.position;
+        //Quaternion _rotation = Quaternion.LookRotation(relativePos);
+        //target.transform.rotation = _rotation;
+        //target.transform.LookAt(player);
     }
 }
