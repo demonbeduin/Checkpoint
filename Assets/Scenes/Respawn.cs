@@ -8,7 +8,6 @@ public class Respawn : MonoBehaviour
 
     void Start()
     {
-        //GameObject _target = Instantiate(_prefab, transform.position, Quaternion.identity);
         InvokeRepeating("Res", 0, 5f);
     }
     private void Res()
