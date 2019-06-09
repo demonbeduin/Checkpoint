@@ -17,9 +17,12 @@ public class EnemyMove : MonoBehaviour
     {
         Vector3 _dir = (_playerTarget.transform.position - transform.position).normalized;
         Vector3 _newdir = Vector3.RotateTowards(transform.forward, _dir, _rotateSpeed * Time.deltaTime, 0.0F);
-
-        transform.position += _dir * _movespeed * Time.deltaTime;
         transform.rotation = Quaternion.LookRotation(_newdir);
+
+        if (Vector3.Distance(transform.position,_playerTarget.transform.position) > 5)
+        {
+            transform.position += _dir * _movespeed * Time.deltaTime;
+        }
 
 
     }
