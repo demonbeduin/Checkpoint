@@ -6,6 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     private GameObject _playerTarget;
     public float _movespeed;
+    public float _rotateSpeed;
 
     void Start()
     {
@@ -15,12 +16,11 @@ public class EnemyMove : MonoBehaviour
     void Update()
     {
         Vector3 _dir = (_playerTarget.transform.position - transform.position).normalized;
-        Quaternion _enemyRotation = Quaternion.LookRotation(_dir);
-        transform.position += _dir * _movespeed * Time.deltaTime;
-        transform.rotation = _enemyRotation;
+        Vector3 _newdir = Vector3.RotateTowards(transform.forward, _dir, _rotateSpeed * Time.deltaTime, 0.0F);
 
-        //Vector3 _newdir = Vector3.RotateTowards(_playerTarget.transform.forward, _dir, _movespeed * Time.deltaTime, 0.0F);
-        //_playerTarget.transform.rotation = Quaternion.LookRotation(_dir);
+        transform.position += _dir * _movespeed * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(_newdir);
+
 
     }
 }
