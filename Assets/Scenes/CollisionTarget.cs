@@ -16,6 +16,7 @@ public class CollisionTarget : MonoBehaviour
         if (collision.gameObject.name == "Sphere(Clone)")
         {
             Destroy(_obj);
+            Destroy(collision.gameObject);
         }
     }
 
