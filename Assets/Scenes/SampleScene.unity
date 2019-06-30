@@ -409,7 +409,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17710
+  m_Name: pb_Mesh7048
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -714,7 +714,7 @@ GameObject:
   m_Layer: 0
   m_Name: Respawn 1
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -96909,57 +96909,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 5308000020080000ed070000ba0700008707000054070000
-  m_SelectedEdges:
-  - a: 8524
-    b: 8525
-  - a: 8526
-    b: 8524
-  - a: 8525
-    b: 8527
-  - a: 8527
-    b: 8526
-  - a: 8320
-    b: 8321
-  - a: 8322
-    b: 8320
-  - a: 8321
-    b: 8323
-  - a: 8323
-    b: 8322
-  - a: 8116
-    b: 8117
-  - a: 8118
-    b: 8116
-  - a: 8117
-    b: 8119
-  - a: 8119
-    b: 8118
-  - a: 7912
-    b: 7913
-  - a: 7914
-    b: 7912
-  - a: 7913
-    b: 7915
-  - a: 7915
-    b: 7914
-  - a: 7708
-    b: 7709
-  - a: 7710
-    b: 7708
-  - a: 7709
-    b: 7711
-  - a: 7711
-    b: 7710
-  - a: 7504
-    b: 7505
-  - a: 7506
-    b: 7504
-  - a: 7505
-    b: 7507
-  - a: 7507
-    b: 7506
-  m_SelectedVertices: 4c2100004d2100004e2100004f21000080200000812000008220000083200000b41f0000b51f0000b61f0000b71f0000e81e0000e91e0000ea1e0000eb1e00001c1e00001d1e00001e1e00001f1e0000501d0000511d0000521d0000531d0000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1043687645
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97308,7 +97260,7 @@ GameObject:
   m_Layer: 0
   m_Name: Respawn 2
   m_TagString: Untagged
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -97458,6 +97410,7 @@ GameObject:
   - component: {fileID: 1685583024}
   - component: {fileID: 1685583023}
   - component: {fileID: 1685583022}
+  - component: {fileID: 1685583025}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -97529,6 +97482,20 @@ Transform:
   m_Father: {fileID: 913810370}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685583025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685583021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de7abc86426b994e857381bb7917f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 1685583023}
+  _prefab: {fileID: 3601446482835311369, guid: 5f61685549a258b4ab27aa2555f58bd3, type: 3}
 --- !u!1001 &1702262103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98144,7 +98111,7 @@ GameObject:
   m_Layer: 0
   m_Name: Light_5
   m_TagString: Light_5
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
