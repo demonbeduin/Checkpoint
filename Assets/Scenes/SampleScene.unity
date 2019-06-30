@@ -97496,6 +97496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 1685583023}
   _prefab: {fileID: 3601446482835311369, guid: 5f61685549a258b4ab27aa2555f58bd3, type: 3}
+  _player: {fileID: 913810366}
 --- !u!1001 &1702262103
 PrefabInstance:
   m_ObjectHideFlags: 0
