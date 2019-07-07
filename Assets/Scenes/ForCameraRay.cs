@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ForCameraRay : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class ForCameraRay : MonoBehaviour
     public float _speed = 20f;
     public float _rSpeed = 1f;
     Vector3 _dir;
+    public NavMeshAgent _agent;
 
     void Start()
     {
         _camera = GetComponent<Camera>();
+        _agent.GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -27,18 +30,21 @@ public class ForCameraRay : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 print(hit.point);
+                _agent.SetDestination(hit.point);
 
-                _dir = (hit.point - _player.transform.position);
+
+                //_dir = (hit.point - _player.transform.position);
                 //_player.transform.position = Vector3.MoveTowards(_player.transform.position, hit.point, _movespeed * Time.deltaTime);
 
                 //Instantiate(_prefab, hit.point, Quaternion.identity);
             }
-            if (Vector3.Distance(hit.point, _player.transform.position) > 1)
-            {
-                Vector3 _newdir = Vector3.RotateTowards(_player.transform.forward, _dir, _rSpeed * Time.deltaTime, 0.0F);
-                _player.transform.rotation = Quaternion.LookRotation(_newdir);
-                _player.transform.position += _dir * _speed * Time.deltaTime;
-            }
+            //if (Vector3.Distance(hit.point, _player.transform.position) > 1)
+            //{
+                //Vector3 _newdir = Vector3.RotateTowards(_player.transform.forward, _dir, _rSpeed * Time.deltaTime, 0.0F);
+                //_player.transform.rotation = Quaternion.LookRotation(_newdir);
+                //_player.transform.position += _dir * _speed * Time.deltaTime;
+                //print(Vector3.Distance(hit.point, _player.transform.position));
+            //}
         }
     }
 }
