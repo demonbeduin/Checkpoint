@@ -6,16 +6,16 @@ using UnityEngine.AI;
 public class ForCameraRay : MonoBehaviour
 {
     public Camera _camera;
-    public GameObject _prefab;
+    //public GameObject _prefab;
     public GameObject _player;
-    public float _speed = 20f;
-    public float _rSpeed = 1f;
-    Vector3 _dir;
+    //public float _speed = 20f;
+    //public float _rSpeed = 1f;
+    //Vector3 _dir;
     public NavMeshAgent _agent;
 
     void Start()
     {
-        _camera = GetComponent<Camera>();
+        _camera.GetComponent<Camera>();
         _agent.GetComponent<NavMeshAgent>();
     }
 
