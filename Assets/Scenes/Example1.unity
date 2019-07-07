@@ -426,6 +426,10 @@ PrefabInstance:
       propertyPath: m_UpdateMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 59b12a5cd7b80974da7e333cc64bd631, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 59b12a5cd7b80974da7e333cc64bd631, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -527,6 +531,24 @@ MonoBehaviour:
   _camera: {fileID: 1729785203}
   _player: {fileID: 1115422794}
   _agent: {fileID: 1115422795}
+  _anim: {fileID: 1115422799}
+--- !u!111 &1115422799
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115422794}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 13caa80bbe9b34403bda844d1694d394, type: 3}
+  m_Animations:
+  - {fileID: 7400002, guid: 080945c46afd34f3ebc364c1696e6678, type: 3}
+  - {fileID: 7400000, guid: 13caa80bbe9b34403bda844d1694d394, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!43 &1184897265
 Mesh:
   m_ObjectHideFlags: 0

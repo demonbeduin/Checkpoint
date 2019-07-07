@@ -12,11 +12,13 @@ public class ForCameraRay : MonoBehaviour
     //public float _rSpeed = 1f;
     //Vector3 _dir;
     public NavMeshAgent _agent;
+    public Animation _anim;
 
     void Start()
     {
         _camera.GetComponent<Camera>();
         _agent.GetComponent<NavMeshAgent>();
+        _anim.GetComponent<Animation>(); 
     }
 
     void Update()
@@ -30,8 +32,8 @@ public class ForCameraRay : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 print(hit.point);
-                _agent.SetDestination(hit.point);
-
+                _anim.Play(_anim.name);
+                //_agent.SetDestination(hit.point);
 
                 //_dir = (hit.point - _player.transform.position);
                 //_player.transform.position = Vector3.MoveTowards(_player.transform.position, hit.point, _movespeed * Time.deltaTime);
